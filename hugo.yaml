@@ -1,13 +1,20 @@
 baseURL: https://henry11996.github.io/henry11996/
 languageCode: zh-tw
-title: Henry's Note
+title: Fooooo's Developer Note
 theme: PaperMod
 params:
+  profileMode:
+    enabled: true
+    buttons:
+      - name: "Blog"
+        url: "/henry11996/posts"
   comments: true
   defaultTheme: auto # to switch between dark or light according to browser theme
   showReadingTime: true
   showBreadCrumbs: true
-socialIcons: 
-  name: LinkIn
-  url: www.linkedin.com/in/fuhungwu
+  socialIcons: 
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/fuhungwu
+    - name: Github
+      url: https://github.com/henry11996
 disqusShortname: henry11996.github.io
