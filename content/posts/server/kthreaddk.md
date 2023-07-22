@@ -7,7 +7,7 @@ tags: ["kthreaddk"]
 
 近期家裡當伺服器的電腦突然很 Lag
 
-想查個元因因此用 htop 來看，看到 `kthreadd` 後 google 搜尋以為是系統程式在跑差點把它忽略，仔細一下原來是 `kthreaddk` 在用 google 搜尋就跳出一堆病毒的結果
+想查個原因，因此用 htop 來看，看到 `kthreadd` 後 google 搜尋以為是系統程式在跑差點把它忽略，仔細一下原來是 `kthreaddk` 再用 google 搜尋就跳出一堆病毒的結果
 
 ## 解決
 每個人的解決方法都很像不同，這邊提供我自己的，目前觀察是沒有再出現
