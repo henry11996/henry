@@ -2,6 +2,7 @@
 title: "Climber 使用教學"
 date: 2023-07-22T20:55:24+08:00
 draft: false
+tags: ["climber", "chrome-extension"]
 ---
 [Chrome Extension](https://chrome.google.com/webstore/detail/climber-%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92%E5%85%A5%E5%9C%92%E8%AD%89%E7%94%B3%E8%AB%8B%E5%8A%A9%E6%89%8B/aofdcgmeiefogniphcaojbkajhhbljoj)
 
