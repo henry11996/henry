@@ -9,8 +9,6 @@ tags: ["kthreaddk"]
 
 想查個元因因此用 htop 來看，看到 `kthreadd` 後 google 搜尋以為是系統程式在跑差點把它忽略，仔細一下原來是 `kthreaddk` 在用 google 搜尋就跳出一堆病毒的結果
 
-![image2](./Screen%20Shot%202023-07-25.png)
-
 ## 解決
 每個人的解決方法都很像不同，這邊提供我自己的，目前觀察是沒有再出現
 
@@ -20,16 +18,20 @@ tags: ["kthreaddk"]
 ```sh
 sudo crontab -l
 ```
-![image](Screen%20Shot%202023-07-24.png)
+![crontab](../images/crontab.png)
 2. 找到奇怪的 port
 ``` sh
 netstat -lpnt
 ```
+``` sh
+ps -ef | grep xxx
+```
+![port](../images/port.png)
 3. 刪除奇怪的排程
 ``` sh
 rm -rf xxx
 ```
-4. 刪除奇怪的 port、kthreaddk process
+4. 刪除奇怪的 port、kthreaddk process id
 ``` sh
 kill -9 xxx
 ```
