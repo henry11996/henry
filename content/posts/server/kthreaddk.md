@@ -4,17 +4,16 @@ title: "Kthreaddk 挖礦病毒處理"
 draft: false
 tags: ["kthreaddk"]
 ---
+最近我家裡的伺服器電腦突然變得很卡，所以我決定用 htop 來查找原因。
 
-近期家裡當伺服器的電腦突然很 Lag
-
-想查個原因，因此用 htop 來看，看到 `kthreadd` 後 google 搜尋以為是系統程式在跑差點把它忽略，仔細一下原來是 `kthreaddk` 再用 google 搜尋就跳出一堆病毒的結果
+一開始看到 kthreadd，我還以為是系統程式在運行，差點忽略它。
 
 ## 解決
 每個人的解決方法都很像不同，這邊提供我自己的，目前觀察是沒有再出現
 
-可能需要注意的是，因為是cron排程每分鐘執行，所以盡量在下一分鐘前刪完
+需要注意的是，因為是 crontab 排程是每分鐘執行會執行一次，所以盡量在下一分鐘前刪完避免他又換資料夾為自
 
-1. 使用找到奇怪的排程
+1. 找到排程中的異樣，通常資料名稱會是沒有意義的亂數
 ```sh
 sudo crontab -l
 ```
@@ -27,12 +26,12 @@ netstat -lpnt
 ps -ef | grep xxx
 ```
 ![port](../images/port.png)
-3. 刪除奇怪的排程
+3. 刪除 crontab 找到的不知名排程的路徑
 ``` sh
 rm -rf xxx
 ```
-4. 刪除奇怪的 port、kthreaddk process id
+4. 刪除奇怪的 port 和 kthreaddk process
 ``` sh
-kill -9 xxx
+kill -9 <pid>
 ```
 

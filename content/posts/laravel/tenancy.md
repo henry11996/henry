@@ -5,14 +5,12 @@ draft: true
 tags: ["laravel", "tenancy", "laravel tenancy"]
 ---
 
-近期公司專案需要使用到 [multi-tenancy](https://zh.wikipedia.org/zh-tw/%E5%A4%9A%E7%A7%9F%E6%88%B6%E6%8A%80%E8%A1%93) 架構
+近期公司專案需要使用到 [multi-tenancy](https://zh.wikipedia.org/zh-tw/%E5%A4%9A%E7%A7%9F%E6%88%B6%E6%8A%80%E8%A1%93) 架構，所以我想分享一下使用這個架構時的測試經驗。
 
-分享一下使用時寫測試的經驗
-
-是依照此套件 [Laravel Tenancy V3](https://github.com/archtechx/tenancy) 去新增測試
+我使用了 [Laravel Tenancy V3](https://github.com/archtechx/tenancy) 套件來實現多租戶功能。在寫測試時，我們依照這個套件並新增測試。
 
 ## Testing
-寫了一個 Trait 方便測試與使用
+新增 Trait 方便測試與使用
 
 ```php
 <?php
