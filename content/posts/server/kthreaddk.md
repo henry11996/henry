@@ -13,24 +13,47 @@ tags: ["kthreaddk"]
 
 需要注意的是，因為是 crontab 排程是每分鐘執行會執行一次，所以盡量在下一分鐘前刪完避免他又換資料夾為自
 
-1. 找到排程中的異樣，通常資料名稱會是沒有意義的亂數
-```sh
-sudo crontab -l
-```
-![crontab](../images/crontab.png)
-2. 找到奇怪的 port
-``` sh
-netstat -lpnt
-```
-``` sh
-ps -ef | grep xxx
-```
-3. 刪除 crontab 找到的不知名排程的路徑
-``` sh
-rm -rf xxx
-```
-4. 刪除奇怪的 port 和 kthreaddk process
-``` sh
-kill -9 <pid>
-```
+1. 找到排程中的異樣，在 `Command` 找到 `kthreaddk` 並且取得 `PID`
+    ```
+    htop
+    ```
+2. 查看 `PID` 位置，通常資料名稱會是沒有意義的亂數而且也已經被刪除
+    ```sh
+    ll /proc/<pid>/exe
+    ```
+3. 查看是否也有奇怪排程
+    ```sh
+    sudo crontab -l
+    ```
+    ![crontab](../images/crontab.png)
+4. 找到奇怪的 `port`
+    ``` sh
+    netstat -lpnt
+    ```
+5. 拿到 `port` 並取得 `pid`
+    ``` sh
+    ps -ef | grep <port>
+    ```
+6. 刪除 `crontab` 和 `pid` 找到的不知名的路徑
+    ``` sh
+    rm -rf <path>
+    ```
+7. 刪除奇怪的 port 和 kthreaddk process
+    ``` sh
+    kill -9 <pid>
+    ```
+8. 用 `htop` 在等一兩分鐘看看有沒有跑起來
 
+## 追查原因
+
+再搜尋了一下 kthreaddk，找到了一篇[相關文章](https://www.freebuf.com/articles/system/282954.html)。在這篇文章中，它提到了這個病毒可能進來的方式，主要是透過 `横向传播`。
+
+目前看來，最有可能的入侵途徑是 `Laravel Debug mode RCE（CVE_2021_3129）`這個漏洞。
+
+原因是 `facade/ignition` 套件版本太舊導致破口產生 ([參考文章](https://tyskill.github.io/posts/cve_2021_3129/))
+
+有目標後搜尋一下果然被抓到
+
+![logs](../images/logs.png)
+
+修正過這個問題後就沒有再跑出這個病毒了
