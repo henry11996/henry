@@ -52,7 +52,7 @@ tags: ["kthreaddk"]
 
 原因是 `facade/ignition` 套件版本太舊導致破口產生 ([參考文章](https://tyskill.github.io/posts/cve_2021_3129/))
 
-有目標後搜尋一下果然被抓到
+有目標後搜尋一下果然找到
 
 ![logs](../images/logs.png)
 
