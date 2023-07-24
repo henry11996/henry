@@ -25,7 +25,6 @@ netstat -lpnt
 ``` sh
 ps -ef | grep xxx
 ```
-![port](../images/port.png)
 3. 刪除 crontab 找到的不知名排程的路徑
 ``` sh
 rm -rf xxx
