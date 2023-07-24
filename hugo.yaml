@@ -1,4 +1,4 @@
-baseURL: https://henry11996.github.io/henry11996/
+baseURL: https://henry11996.github.io
 languageCode: zh-tw
 title: Fooooo's Developer Note
 theme: PaperMod
@@ -20,3 +20,9 @@ params:
       url: https://github.com/henry11996
 disqusShortname: henry11996.github.io
 sectionPagesMenu: main
+sitemap:
+  changefreq: daily
+  filename: sitemap.xml
+  priority: 0.5
+
+
