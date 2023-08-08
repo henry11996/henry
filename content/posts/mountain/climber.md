@@ -14,10 +14,11 @@ tags: ["climber", "chrome-extension"]
 ![填寫入園資料](../images/Step-by-Step%20Guide_%20Applying%20for%20Entry%20to%20National%20Park%20in%20Taiwan%20-%20Step%204.png)
 4. 填寫完點選下一步
 ![填寫完點選下一步](../images/Step-by-Step%20Guide_%20Applying%20for%20Entry%20to%20National%20Park%20in%20Taiwan%20-%20Step%205.png)
-5. 下載範例檔案
+5. 下載人員範例檔案
 ![下載範例檔案](../images/Step-by-Step%20Guide_%20Applying%20for%20Entry%20to%20National%20Park%20in%20Taiwan%20-%20Step%206.png)
-6. 填寫完成後 "點此上傳人員檔案"
+6. 依照格式填寫範例 `xlsx` 檔案
+7. 填寫完成後 "點此上傳人員檔案"
 ![填寫完成後點此上傳人員檔案](../images/Step-by-Step%20Guide_%20Applying%20for%20Entry%20to%20National%20Park%20in%20Taiwan%20-%20Step%207.png)
-7. 上傳成功後即可在選單中選到上傳的人員癲
-![上傳成功後即可在選單中選到上傳的人員癲](../images/Step-by-Step%20Guide_%20Applying%20for%20Entry%20to%20National%20Park%20in%20Taiwan%20-%20Step%208.png)
+8. 上傳成功後即可在選單中選到上傳的人員資料
+![上傳成功後即可在選單中選到上傳的人員資料](../images/Step-by-Step%20Guide_%20Applying%20for%20Entry%20to%20National%20Park%20in%20Taiwan%20-%20Step%208.png)
 
